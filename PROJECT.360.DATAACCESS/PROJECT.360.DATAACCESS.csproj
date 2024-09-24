@@ -51,10 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IUserDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Context\Project360Context.cs" />
     <Compile Include="Migrations\202409241451585_chc.cs" />
     <Compile Include="Migrations\202409241451585_chc.Designer.cs">
       <DependentUpon>202409241451585_chc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409241850019_mig45.cs" />
+    <Compile Include="Migrations\202409241850019_mig45.Designer.cs">
+      <DependentUpon>202409241850019_mig45.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202409242027364_34.cs" />
+    <Compile Include="Migrations\202409242027364_34.Designer.cs">
+      <DependentUpon>202409242027364_34.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,17 +74,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PROJECT.360.CORE\PROJECT.360.CORE.csproj">
+      <Project>{69775e05-0310-48e3-880c-93c67b474d9e}</Project>
+      <Name>PROJECT.360.CORE</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PROJECT.360.ENTITY\PROJECT.360.ENTITY.csproj">
       <Project>{13C2C3F0-F23B-4DE9-9B97-86D3E98C52C5}</Project>
       <Name>PROJECT.360.ENTITY</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202409241451585_chc.resx">
       <DependentUpon>202409241451585_chc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409241850019_mig45.resx">
+      <DependentUpon>202409241850019_mig45.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409242027364_34.resx">
+      <DependentUpon>202409242027364_34.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

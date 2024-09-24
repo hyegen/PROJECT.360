@@ -1,4 +1,5 @@
 ﻿
+using Newtonsoft.Json;
 using PROJECT._360.ENTITY.Base;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,8 @@ namespace PROJECT._360.ENTITY.Models
         public string Email { get; set; }
         public string Gender { get; set; }
         public DateTime? BirthDate { get; set; }
-        public string TelNr1 { get; set; }
+        public string Phone { get; set; }
+        [JsonIgnore]
         public virtual ICollection<UserRole> UserRoles { get; set; }
 
     }

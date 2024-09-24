@@ -10,8 +10,6 @@ namespace PROJECT._360.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View();
         }
     }

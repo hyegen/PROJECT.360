@@ -189,9 +189,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserNameDto.cs" />
+    <Compile Include="Models\RestResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup1.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -334,6 +334,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PROJECT.360.BUSINESS\PROJECT.360.BUSINESS.csproj">
+      <Project>{7D1513A9-7E19-45AA-B006-F93ADFB19F41}</Project>
+      <Name>PROJECT.360.BUSINESS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PROJECT.360.CORE\PROJECT.360.CORE.csproj">
+      <Project>{69775E05-0310-48E3-880C-93C67B474D9E}</Project>
+      <Name>PROJECT.360.CORE</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PROJECT.360.DATAACCESS\PROJECT.360.DATAACCESS.csproj">
       <Project>{4cdbf7b2-1146-4425-afd0-eb42ce58f3c4}</Project>
       <Name>PROJECT.360.DATAACCESS</Name>

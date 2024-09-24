@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13C2C3F0-F23B-4DE9-9B97-86D3E98C52C5}</ProjectGuid>
+    <ProjectGuid>{7D1513A9-7E19-45AA-B006-F93ADFB19F41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PROJECT._360.ENTITY</RootNamespace>
-    <AssemblyName>PROJECT.360.ENTITY</AssemblyName>
+    <RootNamespace>PROJECT._360.BUSINESS</RootNamespace>
+    <AssemblyName>PROJECT.360.BUSINESS</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,11 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,18 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\BaseEntity.cs" />
-    <Compile Include="Base\IEntity.cs" />
-    <Compile Include="Dtos\UsernameDto.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\Role.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Abstract\IUserService.cs" />
+    <Compile Include="Concrete\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\PROJECT.360.CORE\PROJECT.360.CORE.csproj">
+      <Project>{69775E05-0310-48E3-880C-93C67B474D9E}</Project>
+      <Name>PROJECT.360.CORE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PROJECT.360.DATAACCESS\PROJECT.360.DATAACCESS.csproj">
+      <Project>{4CDBF7B2-1146-4425-AFD0-EB42CE58F3C4}</Project>
+      <Name>PROJECT.360.DATAACCESS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PROJECT.360.ENTITY\PROJECT.360.ENTITY.csproj">
+      <Project>{13c2c3f0-f23b-4de9-9b97-86d3e98c52c5}</Project>
+      <Name>PROJECT.360.ENTITY</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

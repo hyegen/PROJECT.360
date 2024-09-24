@@ -1,4 +1,5 @@
-﻿using PROJECT._360.ENTITY.Models;
+﻿using PROJECT._360.DATAACCESS.Migrations;
+using PROJECT._360.ENTITY.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,6 +14,7 @@ namespace PROJECT._360.DATAACCESS.Context
         public Project360Context() : base("name=Project360Context")
         {
             this.Database.CommandTimeout = 180;
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Project360Context, Configuration>());
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

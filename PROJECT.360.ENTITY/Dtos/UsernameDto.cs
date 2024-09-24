@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace PROJECT._360.Models
+namespace PROJECT._360.ENTITY.Dtos
 {
-    public class UserNameDto
+    public class UsernameDto
     {
         public int Id { get; set; }
         public string UserName { get; set; }
@@ -15,6 +16,6 @@ namespace PROJECT._360.Models
         public string Email { get; set; }
         public string Gender { get; set; }
         public DateTime? BirthDate { get; set; }
-        public string TelNr1 { get; set; }
+        public string Phone { get; set; }
     }
 }

@@ -21,5 +21,6 @@ namespace PROJECT._360.ENTITY.Models
         public string ImagePath { get; set; }
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
+        public string TestField { get; set; }
     }
 }
