@@ -18,11 +18,8 @@ namespace PROJECT._360
         public void Configuration(IAppBuilder app)
         {
             var config = new HttpConfiguration();
-
             WebApiConfig.Register(config);
-
             ConfigureOAuth(app);
-
             app.UseWebApi(config);
         }
         public void ConfigureOAuth(IAppBuilder app)
