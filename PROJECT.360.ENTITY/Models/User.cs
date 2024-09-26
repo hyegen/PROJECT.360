@@ -1,6 +1,7 @@
 ﻿
 using Newtonsoft.Json;
 using PROJECT._360.ENTITY.Base;
+using PROJECT._360.ENTITY.Models.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace PROJECT._360.ENTITY.Models
 {
-    public class User :IEntity
+    public class User : IEntity
     {
         [Key]
         public int Id { get; set; }

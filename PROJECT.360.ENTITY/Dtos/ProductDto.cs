@@ -1,18 +1,13 @@
-﻿
-using PROJECT._360.ENTITY.Base;
-using PROJECT._360.ENTITY.Models.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROJECT._360.ENTITY.Models
+namespace PROJECT._360.ENTITY.Dtos
 {
-    public class Product : IEntity
+    public class ProductDto
     {
-        [Key]
         public int Id { get; set; }
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
@@ -21,6 +16,5 @@ namespace PROJECT._360.ENTITY.Models
         public bool IsActive { get; set; }
         public string ImagePath { get; set; }
         public int CategoryId { get; set; }
-        public virtual Category Category { get; set; }
     }
 }

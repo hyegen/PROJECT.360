@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseEntity.cs" />
     <Compile Include="Base\IEntity.cs" />
+    <Compile Include="Dtos\ProductDto.cs" />
     <Compile Include="Dtos\UsernameDto.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Product.cs" />

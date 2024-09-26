@@ -2,6 +2,7 @@
 using PROJECT._360.DATAACCESS.Concrete.EntityFramework;
 using PROJECT._360.ENTITY.Models;
 using PROJECT._360.Models;
+using PROJECT._360.TokenHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ using RoutePrefixAttribute = System.Web.Http.RoutePrefixAttribute;
 
 namespace PROJECT._360.Controllers
 {
+    [JwtAuthenticationFilter]
     [RoutePrefix("api")]
     public class UserController : ApiController
     {
@@ -39,7 +41,6 @@ namespace PROJECT._360.Controllers
             }
             catch (Exception ex)
             {
-
                 var inner = ex.InnerException;
                 return new RestResult
                 {
@@ -63,7 +64,7 @@ namespace PROJECT._360.Controllers
                 };
             }
             try
-            { 
+            {
                 var result = _userManager.AddUser(addedUser);
                 if (result != null)
                 {
