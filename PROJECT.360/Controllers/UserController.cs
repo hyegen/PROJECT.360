@@ -29,7 +29,6 @@ namespace PROJECT._360.Controllers
             try
             {
                 var result = _userManager.GetAllUsers();
-
                 if (result != null || result.Count > 0)
                 {
                     return new RestResult
@@ -60,7 +59,7 @@ namespace PROJECT._360.Controllers
                 return new RestResult
                 {
                     Data = null,
-                    Message = "User model null geldi. User modelini kontrol ediniz."
+                    Message = "User model null geldi. User modelinizi kontrol ediniz."
                 };
             }
             try
@@ -74,21 +73,23 @@ namespace PROJECT._360.Controllers
                         Message = $"{result.Name} isimli kullanıcı başarı ile eklendi."
                     };
                 }
+                else
+                {
+                    return new RestResult
+                    {
+                        Data = null,
+                        Message = "Kullanıcı Eklenirken Bir Hata Meydana Geldi. Lütfen Bilgilerinizi Kontrol Ediniz."
+                    };
+                }
             }
             catch (Exception ex)
             {
-                var inner = ex.InnerException;
                 return new RestResult
                 {
                     Data = null,
-                    Message = $"Kullanıcı Eklerken Hata: {ex.Message}{inner}"
+                    Message = string.Format("Kullanıcı Eklerken Hata: {0}-{1}", ex.Message,ex.InnerException)
                 };
             }
-            return new RestResult
-            {
-                Data = null,
-                Message = $"Kullanıcı Eklerken Hata Oluştu. Bilgilerinizi Kontrol Ediniz."
-            };
         }
     }
 }
