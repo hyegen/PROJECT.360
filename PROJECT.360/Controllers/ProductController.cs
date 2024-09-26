@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace PROJECT._360.Controllers
 {
-    //[JwtAuthenticationFilter]
+    [JwtAuthenticationFilter]
     [RoutePrefix("api")]
     public class ProductController : ApiController
     {
