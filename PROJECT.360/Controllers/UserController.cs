@@ -29,14 +29,11 @@ namespace PROJECT._360.Controllers
             try
             {
                 var result = _userManager.GetAllUsers();
-                if (result != null || result.Count > 0)
+                return new RestResult
                 {
-                    return new RestResult
-                    {
-                        Data = result,
-                        Message = "Kullanıcılar Başarı ile Geldi."
-                    };
-                }
+                    Data = result,
+                    Message = "Kullanıcılar Başarı ile Çekildi."
+                };
             }
             catch (Exception ex)
             {
@@ -47,7 +44,6 @@ namespace PROJECT._360.Controllers
                     Message = $"İstek Oluşurken Hata: {ex.Message}{inner}"
                 };
             }
-            return null;
         }
 
         [HttpPost]
@@ -87,7 +83,7 @@ namespace PROJECT._360.Controllers
                 return new RestResult
                 {
                     Data = null,
-                    Message = string.Format("Kullanıcı Eklerken Hata: {0}-{1}", ex.Message,ex.InnerException)
+                    Message = string.Format("Kullanıcı Eklerken Hata: {0}-{1}", ex.Message, ex.InnerException)
                 };
             }
         }

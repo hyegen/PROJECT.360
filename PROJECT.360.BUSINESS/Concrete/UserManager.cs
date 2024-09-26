@@ -21,7 +21,7 @@ namespace PROJECT._360.BUSINESS.Concrete
         public List<UsernameDto> GetAllUsers()
         {
             var result = _userDal.GetAllUsers();
-            if (result.Count > 0)
+            if (result.Count > 0 && result != null)
             {
                 return result;
             }
