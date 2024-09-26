@@ -33,16 +33,10 @@ namespace PROJECT._360.BUSINESS.Concrete
         }
         public User AddUser(User user)
         {
-            if (user != null)
+            if (user != null && !CheckUserName(user.UserName) && user.UserName != null && user.Password != null)
             {
-                if (!CheckUserName(user.UserName))
-                {
-                    if (user != null && user.UserName != null && user.Password != null)
-                    {
-                        _userDal.Add(user);
-                        return user;
-                    }
-                }
+                _userDal.Add(user);
+                return user;
             }
             return null;
         }
