@@ -1,1 +1,6 @@
-API for PROJECT.360
+->API for PROJECT.360
+->JWT Auth
+->Layered Architecture
+->.NET Framework
+->Linq
+->Generic Infrastructure for CRUD Operations
