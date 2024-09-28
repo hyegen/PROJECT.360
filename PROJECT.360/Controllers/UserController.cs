@@ -53,11 +53,10 @@ namespace PROJECT._360.Controllers
             try
             {
                 var result = _userManager.GetUserById(userId);
-
                 return new RestResult
                 {
                     Data = result,
-                    Message = "Kullanıcılar Başarı ile Çekildi."
+                    Message = $"{result.Email} - Kullanıcı Başarı ile Çekildi."
                 };
             }
             catch (Exception ex)

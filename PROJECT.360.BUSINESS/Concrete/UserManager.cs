@@ -36,21 +36,15 @@ namespace PROJECT._360.BUSINESS.Concrete
             if (user != null && !CheckUserName(user.UserName) && user.UserName != null && user.Password != null)
             {
                 int[] roleId = { 1, 2, 3 };
-
-                var _userRole = new List<UserRole>();
                 foreach (var item in roleId)
                 {
                     var userRole = new UserRole
                     {
-                        //UserId = user.Id,
                         RoleId = item
                     };
                     user.UserRoles.Add(userRole);
                 }
-
                 _userDal.Add(user);
-
-
                 return new User { Email = user.Email };
             }
             return null;

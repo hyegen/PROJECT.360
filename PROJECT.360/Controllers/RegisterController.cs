@@ -23,6 +23,7 @@ namespace PROJECT._360.Controllers
         {
             _tokenService = new TokenService();
         }
+
         [HttpPost]
         [Route("Register")]
         public RestResult Register(User registeredUser)
@@ -41,7 +42,6 @@ namespace PROJECT._360.Controllers
                 if (result != null)
                 {
                     var token = _tokenService.GenerateToken(registeredUser.Email);
-                 
                     return new RestResult
                     {
                         Data = token,
