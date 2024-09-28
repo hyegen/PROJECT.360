@@ -11,7 +11,8 @@ namespace PROJECT._360.DATAACCESS.Abstract
 {
     public interface IUserDal : IEntityRepository<User>
     {
-        List<UsernameDto> GetAllUsers();
+        List<UserDto> GetAllUsers();
         bool CheckUserName(string userName);
+        UserDto GetUserById(int userId);
     }
 }

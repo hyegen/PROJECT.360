@@ -18,7 +18,7 @@ namespace PROJECT._360.BUSINESS.Concrete
         {
             _userDal = userDal;
         }
-        public List<UsernameDto> GetAllUsers()
+        public List<UserDto> GetAllUsers()
         {
             var result = _userDal.GetAllUsers();
             if (result.Count > 0 && result != null)
@@ -35,8 +35,32 @@ namespace PROJECT._360.BUSINESS.Concrete
         {
             if (user != null && !CheckUserName(user.UserName) && user.UserName != null && user.Password != null)
             {
+                int[] roleId = { 1, 2, 3 };
+
+                var _userRole = new List<UserRole>();
+                foreach (var item in roleId)
+                {
+                    var userRole = new UserRole
+                    {
+                        //UserId = user.Id,
+                        RoleId = item
+                    };
+                    user.UserRoles.Add(userRole);
+                }
+
                 _userDal.Add(user);
-                return user;
+
+
+                return new User { Email = user.Email };
+            }
+            return null;
+        }
+
+        public UserDto GetUserById(int userId)
+        {
+            if (userId > 0)
+            {
+                return _userDal.GetUserById(userId);
             }
             return null;
         }

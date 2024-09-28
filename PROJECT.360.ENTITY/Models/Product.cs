@@ -1,6 +1,4 @@
-﻿
-using PROJECT._360.ENTITY.Base;
-using PROJECT._360.ENTITY.Models.Base;
+﻿using PROJECT._360.ENTITY.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

@@ -1,4 +1,4 @@
-﻿using PROJECT._360.DATAACCESS.Migrations;
+﻿
 using PROJECT._360.ENTITY.Models;
 using System;
 using System.Collections.Generic;
@@ -13,11 +13,11 @@ namespace PROJECT._360.DATAACCESS.Context
     {
         public Project360Context() : base("name=Project360Context")
         {
-            this.Database.CommandTimeout = 180;
-           // Database.SetInitializer(new MigrateDatabaseToLatestVersion<Project360Context, Configuration>());
+          //  Database.SetInitializer(new MigrateDatabaseToLatestVersion<Project360Context, Configuration>(true, new Configuration()));
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new UserConfiguration());
 
             modelBuilder.Entity<User>()
                 .HasMany(u => u.UserRoles)
@@ -35,7 +35,6 @@ namespace PROJECT._360.DATAACCESS.Context
                 .HasRequired(ur => ur.Role)
                 .WithMany(r => r.UserRoles)
                 .HasForeignKey(ur => ur.RoleId);
-
         }
 
         public DbSet<User> Users { get; set; }

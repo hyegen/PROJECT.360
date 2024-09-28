@@ -58,29 +58,9 @@
     <Compile Include="Concrete\EntityFramework\EfProductDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Context\Project360Context.cs" />
-    <Compile Include="Migrations\202409241451585_chc.cs" />
-    <Compile Include="Migrations\202409241451585_chc.Designer.cs">
-      <DependentUpon>202409241451585_chc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202409241850019_mig45.cs" />
-    <Compile Include="Migrations\202409241850019_mig45.Designer.cs">
-      <DependentUpon>202409241850019_mig45.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202409242027364_34.cs" />
-    <Compile Include="Migrations\202409242027364_34.Designer.cs">
-      <DependentUpon>202409242027364_34.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202409261331159_hgf.cs" />
-    <Compile Include="Migrations\202409261331159_hgf.Designer.cs">
-      <DependentUpon>202409261331159_hgf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202409261420513_trt.cs" />
-    <Compile Include="Migrations\202409261420513_trt.Designer.cs">
-      <DependentUpon>202409261420513_trt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202409261524043_32.cs" />
-    <Compile Include="Migrations\202409261524043_32.Designer.cs">
-      <DependentUpon>202409261524043_32.cs</DependentUpon>
+    <Compile Include="Migrations\202409281252478_334.cs" />
+    <Compile Include="Migrations\202409281252478_334.Designer.cs">
+      <DependentUpon>202409281252478_334.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,25 +79,9 @@
       <Name>PROJECT.360.ENTITY</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202409241451585_chc.resx">
-      <DependentUpon>202409241451585_chc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202409241850019_mig45.resx">
-      <DependentUpon>202409241850019_mig45.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202409242027364_34.resx">
-      <DependentUpon>202409242027364_34.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202409261331159_hgf.resx">
-      <DependentUpon>202409261331159_hgf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202409261420513_trt.resx">
-      <DependentUpon>202409261420513_trt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202409261524043_32.resx">
-      <DependentUpon>202409261524043_32.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202409281252478_334.resx">
+      <DependentUpon>202409281252478_334.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

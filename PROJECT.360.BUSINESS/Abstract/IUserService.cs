@@ -1,4 +1,5 @@
 ﻿using PROJECT._360.ENTITY.Dtos;
+using PROJECT._360.ENTITY.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace PROJECT._360.BUSINESS.Abstract
 {
     public interface IUserService
     {
-        List<UsernameDto> GetAllUsers();
+        List<UserDto> GetAllUsers();
         bool CheckUserName(string userName);
+        UserDto GetUserById(int userId);
     }
 }

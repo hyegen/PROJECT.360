@@ -46,6 +46,31 @@ namespace PROJECT._360.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("GetUserById")]
+        public RestResult GetUserById(int userId)
+        {
+            try
+            {
+                var result = _userManager.GetUserById(userId);
+
+                return new RestResult
+                {
+                    Data = result,
+                    Message = "Kullanıcılar Başarı ile Çekildi."
+                };
+            }
+            catch (Exception ex)
+            {
+                var inner = ex.InnerException;
+                return new RestResult
+                {
+                    Data = null,
+                    Message = $"İstek Oluşurken Hata: {ex.Message}{inner}"
+                };
+            }
+        }
+
         [HttpPost]
         [Route("AddUser")]
         public RestResult AddUser(User addedUser)

@@ -7,13 +7,13 @@ namespace PROJECT._360.DATAACCESS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class mig45 : IMigrationMetadata
+    public sealed partial class _334 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(mig45));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_334));
         
         string IMigrationMetadata.Id
         {
-            get { return "202409241850019_mig45"; }
+            get { return "202409281252478_334"; }
         }
         
         string IMigrationMetadata.Source
